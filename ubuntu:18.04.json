@@ -63,10 +63,8 @@
             ]
         }
     ],
-    "provisioners": [{
+    "provisioners": {
       "type": "ansible",
-      "scripts": [
-        "scripts/init.yml"
-      ]
-    }]
+      "playbook_file": "scripts/init.yml"
+    }
   }
