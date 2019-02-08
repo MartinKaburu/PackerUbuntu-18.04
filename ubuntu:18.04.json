@@ -39,11 +39,11 @@
             "iso_checksum_type": "sha256",
             "iso_checksum": "7b37dfcd082726303528e47c82f88f29c1dc9232f8fd39120d13749ae83cc463",
             "ssh_pty" : "true",
-            "ssh_username": "kaburu",
-            "ssh_password": "kaburu",
+            "ssh_username": "vagrant",
+            "ssh_password": "vagrant",
             "ssh_port": 22,
             "ssh_wait_timeout": "10000s",
-            "shutdown_command": "echo 'kaburu'|sudo -S shutdown -P now",
+            "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
             "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
             "virtualbox_version_file": ".vbox_version",
             "vm_name": "packer-ubuntu-18.04-amd64",
@@ -64,9 +64,9 @@
         }
     ],
     "provisioners": [{
-      "type": "shell",
+      "type": "ansible",
       "scripts": [
-        "scripts/init.sh"
+        "scripts/init.yml"
       ]
     }]
   }
